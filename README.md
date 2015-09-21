@@ -3,11 +3,13 @@
 Simple example app attempting to put together a straightforward
 clojure web stack, including:
 
-* [ ] Log configuration
+* [X] Log configuration
 * [ ] DB access using Postgres
 * [ ] Clojurescript support including Figwheel
 * [ ] Reagent frontend
-* [ ] HTTP-Kit webserver including simple websocket hook
+* [X] HTTP-Kit webserver
+* [ ] simple websocket hook on HTTP-kit
+* [X] code reloading (ring reload middleware)
 
 ## Running
 
