@@ -1,12 +1,13 @@
-# clj-web-template
+## Clojure Web App Template
 
-FIXME
+Simple example app attempting to put together a straightforward
+clojure web stack, including:
 
-## Prerequisites
-
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
+* [ ] Log configuration
+* [ ] DB access using Postgres
+* [ ] Clojurescript support including Figwheel
+* [ ] Reagent frontend
+* [ ] HTTP-Kit webserver including simple websocket hook
 
 ## Running
 
