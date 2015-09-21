@@ -1,7 +1,7 @@
 (ns clj-web-template.views
   (:require [hiccup.core :refer [html]]
             [hiccup.form :as hf]
-            [ring.util.anti-forgery refer [:anti-forgery-field]]))
+            ))
 
 (defn layout
   [content]
@@ -15,19 +15,15 @@
 (defn form []
   (hf/form-to
    [:post "/examples"]
-   (anti-forgery-field)
-   [:div
-    (hf/label "email" "Email")
-    (hf/email-field {:placeholder "Email"} "example.email")]
-   [:div
-    (hf/label "pass" "Password")
-    (hf/password-field {:placeholder "Password"} "example.pass")]
    [:div
     (hf/label "name" "Name")
-    (hf/text-field {:placeholder "Name"} "example.name")]
+    (hf/text-field {:placeholder "Name"} "name")]
+   [:div
+    (hf/label "pass" "Password")
+    (hf/password-field {:placeholder "Password"} "pass")]
    [:div
     (hf/label "admin" "Admin?")
-    (hf/check-box "example.admin")]
+    (hf/check-box "admin")]
    (hf/submit-button "Submit")
    ))
 
