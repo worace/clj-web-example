@@ -1,6 +1,7 @@
 (ns clj-web-template.core
   (:require [org.httpkit.server :as http-kit]
             [clj-web-template.config.utils :as utils]
+            [taoensso.timbre :as log]
             [clj-web-template.handler :as handler])
   (:gen-class))
 
@@ -20,4 +21,5 @@
   (.addShutdownHook (Runtime/getRuntime) (Thread. stop!)))
 
 (defn -main [& args]
+  (log/info "Starting app with args: " args)
   (start! (utils/http-port (first args))))
