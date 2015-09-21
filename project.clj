@@ -12,6 +12,7 @@
                  [migratus "0.8.4"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
                  [yesql "0.4.2"]
+                 [hiccup "1.0.5"]
                  [ring "1.4.0"
                   :exclusions [ring/ring-jetty-adapter
                                ring/ring-servlet]]
