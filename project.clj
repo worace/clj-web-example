@@ -25,6 +25,10 @@
              :db (or (System/getenv "DATABASE_URL")
                      "postgres://localhost/clj_web_template_development")
              }
+  :uberjar-name "clj-web-template.jar"
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+  {:uberjar {:omit-source true
+             :env {:production true}
+             :aot :all}
+   :dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})

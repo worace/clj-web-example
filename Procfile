@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/clj-web-templst.jar
+web: java $JVM_OPTS -jar target/clj-web-template.jar

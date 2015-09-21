@@ -11,7 +11,7 @@ clojure web stack, including:
 * [X] HTTP-Kit webserver
 * [ ] simple websocket hook on HTTP-kit
 * [X] code reloading (ring reload middleware)
-* [ ] Procfile for heroku
+* [X] Procfile for heroku
 
 ## Running
 
@@ -42,6 +42,23 @@ or revert the last one with:
 
 ```
 lein migratus rollback
+```
+
+## DB Setup
+
+The db will need to be created in the appropriate postgres
+server.
+
+__Locally__
+
+```
+createdb clj_web_template_development
+```
+
+__Heroku__
+
+```
+heroku addons:create heroku-postgresql:hobby-dev
 ```
 
 ## License
