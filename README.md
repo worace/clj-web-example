@@ -4,7 +4,8 @@ Simple example app attempting to put together a straightforward
 clojure web stack, including:
 
 * [X] Log configuration
-* [ ] DB access using Postgres
+* [X] DB access using Postgres
+* [X] DB queries using Yesql
 * [X] DB migrations using Migratus
 * [ ] Clojurescript support including Figwheel
 * [ ] Reagent frontend
