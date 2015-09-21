@@ -9,13 +9,22 @@
                  [environ "1.0.1"]
                  [com.taoensso/timbre "4.1.1"]
                  [ring-logger-timbre "0.7.0"]
+                 [migratus "0.8.4"]
+                 [org.postgresql/postgresql "9.4-1201-jdbc41"]
                  [ring "1.4.0"
                   :exclusions [ring/ring-jetty-adapter
                                ring/ring-servlet]]
                  [ring/ring-defaults "0.1.2"]]
   :plugins [[lein-ring "0.8.13"]
+            [migratus-lein "0.1.7"]
             [lein-environ "1.0.1"]]
   :ring {:handler clj-web-template.handler/app}
+  :migratus {:store                :database
+             :migration-dir        "db/migrations/"
+             :migration-table-name "schema_migrations"
+             :db (or (System/getenv "DATABASE_URL")
+                     "postgres://localhost/clj_web_template_development")
+             }
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
