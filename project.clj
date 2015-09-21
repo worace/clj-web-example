@@ -11,6 +11,7 @@
                  [ring-logger-timbre "0.7.0"]
                  [migratus "0.8.4"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
+                 [yesql "0.4.2"]
                  [ring "1.4.0"
                   :exclusions [ring/ring-jetty-adapter
                                ring/ring-servlet]]
@@ -31,4 +32,5 @@
              :env {:production true}
              :aot :all}
    :dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring-mock "0.1.5"]]}})
+                        [ring-mock "0.1.5"]]
+         :env {:database-url "postgres://localhost/clj_web_template_development"}}})
